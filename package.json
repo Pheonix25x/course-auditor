@@ -1,0 +1,32 @@
+{
+  "name": "course-auditor",
+  "version": "1.0.0",
+  "description": "Automated Course Content Auditor using Node.js, Crawlee, Playwright, and Google Docs API",
+  "type": "module",
+  "main": "audit.js",
+  "scripts": {
+    "login": "node audit.js login",
+    "inspect": "node audit.js inspect",
+    "test:single": "node audit.js crawl --single",
+    "crawl": "node audit.js crawl",
+    "compare": "node audit.js compare",
+    "report": "node audit.js report",
+    "google-doc": "node audit.js google-doc",
+    "audit": "node audit.js audit"
+  },
+  "keywords": [
+    "course-auditor",
+    "crawlee",
+    "playwright",
+    "content-audit",
+    "google-docs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "crawlee": "^3.11.0",
+    "dotenv": "^16.4.5",
+    "googleapis": "^144.0.0",
+    "playwright": "^1.48.0"
+  }
+}

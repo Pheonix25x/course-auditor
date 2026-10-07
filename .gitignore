@@ -1,0 +1,38 @@
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Authenticated browser sessions & cookies
+auth/*
+!auth/.gitkeep
+
+# Google OAuth / Service Account credentials
+credentials/
+*.pem
+*.key
+token.json
+client_secret*.json
+
+# Dependencies
+node_modules/
+
+# Crawlee local storage & logs
+storage/
+apify_storage/
+
+# Extracted course/source data & generated reports
+data/course/*
+!data/course/.gitkeep
+data/source/*
+!data/source/.gitkeep
+data/reports/*
+!data/reports/.gitkeep
+
+# Exclude JSON data/config files by default
+*.json
+
+# Keep required project & example JSON files tracked in Git
+!package.json
+!package-lock.json
+!config/config.example.json

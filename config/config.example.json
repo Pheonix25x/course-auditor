@@ -1,0 +1,225 @@
+{
+  "courseUrl": "",
+  "sourceUrl": "",
+  "courseName": "",
+  "googleDocId": "",
+  "browser": {
+    "headless": false,
+    "slowMo": 50,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "navigationTimeoutMs": 45000,
+    "slideWaitMs": 1500
+  },
+  "crawl": {
+    "resumeEnabled": true,
+    "singleTestMode": false,
+    "maxModules": 0,
+    "maxSubtopicsPerModule": 0,
+    "maxSlidesPerSubtopic": 250,
+    "maxSourcePages": 200,
+    "sameDomainOnly": true
+  },
+  "loginDetection": {
+    "loginFormSelectors": [
+      "input[type='password']",
+      "form[action*='login' i]",
+      "form[action*='signin' i]",
+      "[data-testid*='login' i]",
+      "#login-form",
+      ".login-form"
+    ],
+    "authenticatedSelectors": [
+      "[class*='course' i]",
+      "[class*='module' i]",
+      "[class*='lesson' i]",
+      "[class*='curriculum' i]",
+      "[class*='syllabus' i]",
+      "[class*='dashboard' i]",
+      "a[href*='logout' i]",
+      "button[aria-label*='profile' i]"
+    ],
+    "loginUrlPatterns": [
+      "/login",
+      "/signin",
+      "/sign-in",
+      "/auth"
+    ]
+  },
+  "courseSelectors": {
+    "courseTitle": [
+      "h1.course-title",
+      "[data-testid='course-title']",
+      ".course-header h1",
+      "header h1",
+      "h1"
+    ],
+    "moduleContainers": [
+      "[data-module]",
+      ".module-item",
+      ".course-module",
+      ".curriculum-module",
+      ".accordion-item",
+      ".section-item",
+      "nav [class*='module' i]",
+      "aside [class*='module' i]"
+    ],
+    "moduleTitle": [
+      ".module-title",
+      ".section-title",
+      ".accordion-header",
+      "h2",
+      "h3",
+      "button",
+      "summary",
+      "a"
+    ],
+    "subtopicItems": [
+      "[data-subtopic]",
+      "[data-lesson]",
+      ".subtopic-item",
+      ".lesson-item",
+      ".topic-item",
+      ".module-subtopic",
+      "ul li a",
+      "a[href*='lesson' i]",
+      "a[href*='topic' i]",
+      "a[href*='module' i]",
+      "a[href*='slide' i]"
+    ],
+    "slideFrame": [
+      "iframe#course-frame",
+      "iframe[src*='scorm' i]",
+      "iframe[src*='player' i]",
+      "iframe[src*='slide' i]",
+      "iframe[title*='course' i]",
+      "iframe[title*='content' i]"
+    ],
+    "slideContainer": [
+      "[data-slide-content]",
+      ".slide-content",
+      ".slide-container",
+      ".lesson-content",
+      ".course-content",
+      "#slide-container",
+      "article",
+      "main",
+      "[role='main']"
+    ],
+    "slideTitle": [
+      ".slide-title",
+      "[data-slide-title]",
+      ".lesson-title",
+      "h1",
+      "h2"
+    ],
+    "slideCounter": [
+      ".slide-counter",
+      ".slide-number",
+      ".page-counter",
+      "[class*='pagination' i]",
+      "[aria-label*='slide' i]"
+    ],
+    "nextSlideButton": [
+      "button[aria-label*='next' i]:not([disabled])",
+      "a[aria-label*='next' i]:not(.disabled)",
+      "[data-testid*='next' i]:not([disabled])",
+      ".next-slide:not(.disabled):not([disabled])",
+      ".btn-next:not(.disabled):not([disabled])",
+      "button.next:not([disabled])",
+      "#next-btn:not([disabled])",
+      "#next:not([disabled])",
+      "button:has-text('Next'):not([disabled])",
+      "a:has-text('Next'):not(.disabled)"
+    ],
+    "prevSlideButton": [
+      "button[aria-label*='prev' i]",
+      "button[aria-label*='back' i]",
+      ".prev-slide",
+      ".btn-prev",
+      "button:has-text('Previous')",
+      "button:has-text('Back')"
+    ],
+    "excludeSelectors": [
+      "nav",
+      "header.site-header",
+      "footer",
+      "aside",
+      ".sidebar",
+      ".navigation",
+      ".nav-menu",
+      ".breadcrumbs",
+      ".cookie-banner",
+      "#cookie-consent",
+      "[class*='cookie' i]",
+      "[id*='cookie' i]",
+      ".login-controls",
+      ".user-menu",
+      "button",
+      "[role='navigation']",
+      "[aria-hidden='true']",
+      ".sr-only",
+      ".visually-hidden",
+      "script",
+      "style",
+      "noscript",
+      "svg",
+      "iframe[src*='analytics' i]",
+      "iframe[src*='gtm' i]"
+    ]
+  },
+  "sourceSelectors": {
+    "contentContainer": [
+      "article",
+      "main",
+      "[role='main']",
+      ".content-area",
+      ".main-content",
+      ".post-content",
+      ".entry-content",
+      ".article-body",
+      "#content",
+      "#main-content",
+      "body"
+    ],
+    "excludeSelectors": [
+      "nav",
+      "header",
+      "footer",
+      "aside",
+      ".sidebar",
+      ".menu",
+      ".navigation",
+      ".navbar",
+      ".breadcrumbs",
+      ".cookie-banner",
+      ".cookie-notice",
+      "[class*='cookie' i]",
+      "[id*='cookie' i]",
+      ".ad",
+      ".ads",
+      ".advertisement",
+      "[class*='advert' i]",
+      ".social-share",
+      ".comments",
+      ".related-posts",
+      "[role='navigation']",
+      "[role='banner']",
+      "[role='contentinfo']",
+      "[aria-hidden='true']",
+      ".sr-only",
+      "script",
+      "style",
+      "noscript",
+      "svg"
+    ]
+  },
+  "comparison": {
+    "exactMatchThreshold": 0.98,
+    "minorDifferenceThreshold": 0.85,
+    "matchConfidenceThreshold": 0.32,
+    "highConfidenceMatchThreshold": 0.55
+  }
+}
